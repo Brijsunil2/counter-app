@@ -1,0 +1,19 @@
+{
+  "counters": [
+    {
+      "id": 1,
+      "text": "Apples",
+      "count": 10
+    },
+    {
+      "id": 2,
+      "text": "Oranges",
+      "count": 5
+    },
+    {
+      "id": 3,
+      "text": "Carrots",
+      "count": 23
+    }
+  ]
+}
