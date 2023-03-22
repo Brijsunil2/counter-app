@@ -1,8 +1,16 @@
+import "./App.css";
+
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
+import CounterList from "./components/CounterList";
+import AddCounter from "./components/AddCounter";
 
 const App = () => {
-  const [counters, setCounters] = useState([]);
+  const [counters, setCounters] = useState([{
+    "id": 1,
+    "text": "Apples",
+    "count": 10
+  }]);
 
   useEffect(() => {
     const getCounters = async () => {
@@ -18,13 +26,13 @@ const App = () => {
 
     return data;
   }
-
-
   
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <AddCounter />
+      <CounterList counters={counters} />
+    </>
   )
 }
 
