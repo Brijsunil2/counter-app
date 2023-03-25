@@ -14,6 +14,11 @@
       "id": 3,
       "text": "Carrots",
       "count": 23
+    },
+    {
+      "text": "Pears",
+      "count": "2",
+      "id": 4
     }
   ]
 }

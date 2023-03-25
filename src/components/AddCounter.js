@@ -1,8 +1,10 @@
 import { useState } from 'react';
 
 const AddCounter = ({ addCounter }) => {
+  const maxCount = 2147483647;
+  const minCount = 0;
   const [text, setText] = useState('');
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +16,7 @@ const AddCounter = ({ addCounter }) => {
 
     addCounter({text, count});
     setText('');
-    setCount(0);
+    setCount();
   }
 
   return (
@@ -31,7 +33,15 @@ const AddCounter = ({ addCounter }) => {
               aria-label="Name" />
           </div>
           <div className="col-5">
-            <input type="text" id="count" className="form-control" placeholder="Count" aria-label="Count" />
+            <input 
+              type="number"
+              value={count}
+              className="form-control" 
+              onChange={(e) => setCount(e.target.value)}
+              max={maxCount}
+              min={minCount}
+              placeholder="Count" 
+              aria-label="Count" />
           </div>
           <div className="col">
             <input type="submit" value="Add" className="btn btn-secondary btn-block"/>
