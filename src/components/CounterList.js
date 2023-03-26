@@ -1,6 +1,6 @@
 import CounterListItem from "./CounterListItem"
 
-const CounterList = ({ counters }) => {
+const CounterList = ({ counters, updCount, deleteCounter }) => {
   return (
     <div className="container pt-4">
 
@@ -8,7 +8,12 @@ const CounterList = ({ counters }) => {
         <tbody>
           {
             counters.map((counter) => (
-              <CounterListItem key={counter.id} counter={counter} />
+              <CounterListItem 
+                key={counter.id} 
+                counter={counter} 
+                updCount={updCount}
+                deleteCounter={deleteCounter}
+              />
             ))
           }
         </tbody>

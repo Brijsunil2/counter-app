@@ -1,24 +1,14 @@
 {
   "counters": [
     {
-      "id": 1,
-      "text": "Apples",
-      "count": 10
-    },
-    {
-      "id": 2,
       "text": "Oranges",
-      "count": 5
-    },
-    {
-      "text": "Bananas",
-      "count": 12,
-      "id": 3
+      "count": 1,
+      "id": 2
     },
     {
       "text": "Pears",
-      "count": 13,
-      "id": 4
+      "count": 6,
+      "id": 3
     }
   ]
 }
