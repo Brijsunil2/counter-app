@@ -29,6 +29,13 @@ const App = () => {
     return data;
   }
 
+  const fetchCounter = async (id) => {
+    const res = await fetch(`${countersLink}/${id}`);
+    const data = await res.json();
+
+    return data;
+  }
+
   const addCounter = async (counter) => {
     const res = await fetch(countersLink, {
       method: 'POST',
@@ -40,6 +47,24 @@ const App = () => {
 
     const data = await res.json();
     setCounters([...counters, data]);
+  }
+
+  const addToCounter = async (id) => {
+    const counterToInc = await fetchCounter(id);
+    const updCounter = {...counterToInc, count: counterToInc.count + 1};
+    const res = await fetch(`${countersLink}/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(updCounter)
+      }
+    );
+
+    const data = await res.json();
+
+    setCounters(counters.map((counter) => counter.id === id ? {...counter, count: data.count} : counter));
   }
   
   return (

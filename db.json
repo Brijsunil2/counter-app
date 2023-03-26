@@ -11,13 +11,13 @@
       "count": 5
     },
     {
-      "id": 3,
-      "text": "Carrots",
-      "count": 23
+      "text": "Bananas",
+      "count": 12,
+      "id": 3
     },
     {
       "text": "Pears",
-      "count": "2",
+      "count": 13,
       "id": 4
     }
   ]

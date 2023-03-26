@@ -4,7 +4,7 @@ const AddCounter = ({ addCounter }) => {
   const maxCount = 2147483647;
   const minCount = 0;
   const [text, setText] = useState('');
-  const [count, setCount] = useState();
+  const [count, setCount] = useState('');
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -14,9 +14,11 @@ const AddCounter = ({ addCounter }) => {
       return;
     }
 
-    addCounter({text, count});
+    const countInt = parseInt(count);
+
+    addCounter({text, count: countInt});
     setText('');
-    setCount();
+    setCount('');
   }
 
   return (
