@@ -3,14 +3,6 @@
   margin: 0;
 }
 
-thead tr {
-  background-color: #dee2e6;
-}
-
-tbody tr:hover {
-  background-color: #f8f9fa;
-}
-
 .prevent-select {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
